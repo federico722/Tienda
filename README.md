@@ -16,4 +16,4 @@ Este es un proyecto para practicar y profundizar conocimientos en git utilizando
 * gitflow
 
 # Develop by
-federico pelaez
+federico pelae
