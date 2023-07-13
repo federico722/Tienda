@@ -1,22 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="/css/producto.css">
+    <link rel="stylesheet" href="../css/producto.css">
     <title>Tienda | Producto</title>
 </head>
 <body>
     <div>
-<h1 class="titulo">Productos</h1>
-<div class="container">
-    <div class="card"><img src="../imagen/producto1.jpg" alt="Viaje al centro de la tierra" class="card-image"></div>
-    <div class="card"><img src="../imagen/producto2.jpg" alt="La vuelta al mundo" class="card-image"></div>
-    <div class="card"><img src="../imagen/producto3.jpg" alt="Dos años de vacaciones" class="card-image"></div>
-    <div class="card"><img src="../imagen/producto41.jpeg" alt="20.000 leguas de viaje submarino" class="card-image"></div>
-    <div class="card"><img src="../imagen/producto5.avif" alt="Un capitan de quince años" class="card-image"></div>
-    <div class="card"><img src="../imagen/producto6.jpg" alt="Viaje a la luna" class="card-image"></div>
-</div>
+        <h1 class="titulo">Productos</h1>
+        <div class="container">
+            <div class="card">
+                <img src="../imagen/producto1.jpg" alt="Viaje al centro de la tierra" class="card-image" onclick="agregarCantidad('cantidad-1')">
+                <span id="cantidad-1">0</span>
+            </div>
+            <div class="card">
+                <img src="../imagen/producto2.jpg" alt="La vuelta al mundo" class="card-image" onclick="agregarCantidad('cantidad-2')">
+                <span id="cantidad-2">0</span>
+            </div>
+            
+            <div class="card">
+                <img src="../imagen/producto3.jpg" alt="La vuelta al mundo" class="card-image" onclick="agregarCantidad('cantidad-3')">
+                <span id="cantidad-3">0</span>
+            </div>
+
+
+        </div>
     </div>
+
+    <script src="/js/carritoCompras.js"></script>
+    <script>
+        function agregarCantidad(cantidadId) {
+            let cantidadElemento = document.getElementById(cantidadId);
+            let cantidadActual = parseInt(cantidadElemento.innerText);
+            cantidadActual++;
+            cantidadElemento.innerText = cantidadActual;
+        }
+    </script>
 </body>
 </html>
