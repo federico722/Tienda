@@ -14,42 +14,56 @@
             <div class="card">
                 <img src="../imagen/producto1.jpg" alt="Viaje al centro de la tierra" class="card-image" onclick="agregarCantidad('cantidad-1')">
                 <span id="cantidad-1">0</span>
+                <button onclick="actualizarCantidad('cantidad-1', 1)">+</button>
+                <button onclick="actualizarCantidad('cantidad-1', -1)">-</button>
             </div>
             <div class="card">
                 <img src="../imagen/producto2.jpg" alt="La vuelta al mundo" class="card-image" onclick="agregarCantidad('cantidad-2')">
                 <span id="cantidad-2">0</span>
+                <button onclick="actualizarCantidad('cantidad-1', 1)">+</button>
+                <button onclick="actualizarCantidad('cantidad-1', -1)">-</button>
             </div>
             
             <div class="card">
                 <img src="../imagen/producto3.jpg" alt="La vuelta al mundo" class="card-image" onclick="agregarCantidad('cantidad-3')">
                 <span id="cantidad-3">0</span>
+                <button onclick="actualizarCantidad('cantidad-1', 1)">+</button>
+                <button onclick="actualizarCantidad('cantidad-1', -1)">-</button>
             </div>
             
             <div class="card">
                 <img src="../imagen/producto41.jpeg" alt="La vuelta al mundo" class="card-image" onclick="agregarCantidad('cantidad-4')">
                 <span id="cantidad-4">0</span>
+                <button onclick="actualizarCantidad('cantidad-1', 1)">+</button>
+                <button onclick="actualizarCantidad('cantidad-1', -1)">-</button>
             </div>
 
             <div class="card">
                 <img src="../imagen/producto5.avif" alt="La vuelta al mundo" class="card-image" onclick="agregarCantidad('cantidad-5')">
                 <span id="cantidad-5">0</span>
+                <button onclick="actualizarCantidad('cantidad-1', 1)">+</button>
+                <button onclick="actualizarCantidad('cantidad-1', -1)">-</button>
             </div>
             
             <div class="card">
                 <img src="../imagen/producto6.jpg" alt="La vuelta al mundo" class="card-image" onclick="agregarCantidad('cantidad-6')">
                 <span id="cantidad-6">0</span>
+                <button onclick="actualizarCantidad('cantidad-1', 1)">+</button>
+                <button onclick="actualizarCantidad('cantidad-1', -1)">-</button>
             </div>
         </div>
     </div>
 
-    <script src="/js/carritoCompras.js"></script>
+    <script src="js/carritoCompras.js"></script>
     <script>
-        function agregarCantidad(cantidadId) {
-            let cantidadElemento = document.getElementById(cantidadId);
-            let cantidadActual = parseInt(cantidadElemento.innerText);
-            cantidadActual++;
-            cantidadElemento.innerText = cantidadActual;
-        }
+    function actualizarCantidad(cantidadId, incremento) {
+        let cantidadElemento = document.getElementById(cantidadId);
+        let cantidadActual = parseInt(cantidadElemento.innerText);
+        cantidadActual += incremento;
+        cantidadElemento.innerText = cantidadActual;
+    }
     </script>
 </body>
 </html>
+
+
